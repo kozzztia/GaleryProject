@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import GamesContainer from './components/containers/GamesContainer';
+import Navigation from './components/header/Navigation';
+import PlatformsContainer from './components/containers/PlatformsContainer';
+import GenresContainer from './components/containers/GenresContainer';
+import Errorcontainer from './components/containers/Errorcontainer';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Routes>
+        <Route path="/GamesContainer" element={<GamesContainer />} />
+        <Route path="/PlatformsContainer" element={<PlatformsContainer />} />
+        <Route path="/GenresContainer" element={<GenresContainer />} />
+        <Route path="*" element={<Errorcontainer />} />
+      </Routes>
     </div>
   );
 }
