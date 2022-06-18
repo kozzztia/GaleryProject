@@ -1,20 +1,15 @@
 @import '../../index.css';
 
-.navigation{
-    width: 100%;
-    display: block;
+.nav{
+    color: red;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: inherit;
 }
-.navigationItem{
-    color: #fff;
+.item{
+    font-size: 30px;
     transition: all 0.5s;
+    padding: 10px;
     text-decoration: none;
-
+    color: var(--main-text-color);
 }
-.navigationItem:hover{
-    color: red;
-}
-

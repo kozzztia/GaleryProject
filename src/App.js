@@ -1,23 +1,20 @@
 
-import GamesContainer from './components/containers/GamesContainer';
-import Navigation from './components/header/Navigation';
-import PlatformsContainer from './components/containers/PlatformsContainer';
-import GenresContainer from './components/containers/GenresContainer';
-import Errorcontainer from './components/containers/Errorcontainer';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+import Navigation from './Components/navigation/Navigation';
+import { Routes, Route } from 'react-router-dom';
+import About from './Components/About/About';
+import Galery from './Components/Galery/Galery';
+import Todo from './Components/Todo/Todo';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Routes>
-        <Route path="/GamesContainer" element={<GamesContainer />} />
-        <Route path="/PlatformsContainer" element={<PlatformsContainer />} />
-        <Route path="/GenresContainer" element={<GenresContainer />} />
-        <Route path="*" element={<Errorcontainer />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Galery" element={<Galery />} />
+        <Route path="/Todo" element={<Todo />} />
+        <Route path="/Game" element={<About />} />
+        <Route path="/" element={<About />} />
       </Routes>
     </div>
   );
