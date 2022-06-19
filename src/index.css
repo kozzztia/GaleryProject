@@ -40,3 +40,19 @@ body {
 }
 
 
+.GaleryList{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0  auto;
+  padding: 20px;
+}
+.GaleryList input , .GaleryList button{
+  padding: 10px;
+}
+.GaleryList ul{
+  padding:20px;
+  list-style-type: none;
+}
